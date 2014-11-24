@@ -8,10 +8,13 @@ $(window).load(function() {
         accessibility: true,
         onInit: function() {
             $self = $(this)[0];
-            console.log('init')
+            console.log('init');
+            $(this.$slider[0].querySelectorAll('.count')[0]).text(this.slideCount);
             $.extend(this, {
+                counter: $(this.$slider[0].querySelectorAll('.counter')[0]),
                 captionText: $(this.$slider[0].querySelectorAll('.text')[0]),
                 changeCaptionText: function() {
+                    this.counter.text( this.currentSlide + 1);
                     this.captionText[0].innerText = $self.$slides[$self.currentSlide].firstElementChild.dataset.caption || "";
                 },
                 fullScreenBtn: $(this.$slider[0].querySelectorAll('.gallery-zoom')[0]),
@@ -50,11 +53,15 @@ $(window).load(function() {
                             slidesToShow: 1,
                             onInit: function() {
                                 $selfFullScreen = $(this)[0];
+                                debugger
+                                $($selfFullScreen.$slider[0].querySelectorAll('.count')).text($selfFullScreen.slideCount);
                                 $.extend(this, {
-                                    captionText: $(this.$slider[0].querySelectorAll('.text')[0]),
+                                    counter: $($selfFullScreen.$slider[0].querySelectorAll('.counter')[0]),
+                                    captionText: $($selfFullScreen.$slider[0].querySelectorAll('.text')[0]),
                                     changeCaptionText: function() {
+                                        $($selfFullScreen.counter).text(this.currentSlide + 1);
                                         if ($selfFullScreen.$slides.length) {
-                                            this.captionText[0].innerText = $selfFullScreen.$slides[$selfFullScreen.currentSlide].firstElementChild.dataset.caption || "";
+                                            $selfFullScreen.captionText[0].innerText = $selfFullScreen.$slides[$selfFullScreen.currentSlide].firstElementChild.dataset.caption || "";
                                         }
                                     },
                                     fullScreenBtn: $(this.$slider[0].querySelectorAll('.close')[0]),
