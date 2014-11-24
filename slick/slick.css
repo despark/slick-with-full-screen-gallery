@@ -193,3 +193,162 @@
     .slick-dots li.slick-active button:before {
       color: black;
       opacity: 0.75; }
+
+#gallery {
+  background-color: #333 !important;
+  position: relative;
+  width: 100%;
+  padding: 1px 0; }
+  #gallery h1 {
+    margin-top: 44px;
+    margin-bottom: 44px;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1;
+    color: #999;
+    letter-spacing: 0;
+    font-weight: 800; }
+  #gallery img {
+    max-width: 100%; }
+  #gallery .slick-slider .slick-prev, #gallery .slick-slider .slick-next {
+    top: 0;
+    margin: 0;
+    width: 50%;
+    height: 100%; }
+    #gallery .slick-slider .slick-prev:before, #gallery .slick-slider .slick-next:before {
+      content: ''; }
+  #gallery .slick-slider .slick-prev {
+    left: 0; }
+    #gallery .slick-slider .slick-prev:hover {
+      cursor: url(arrow-left.png), pointer; }
+  #gallery .slick-slider .slick-next {
+    right: 0; }
+    #gallery .slick-slider .slick-next:hover {
+      cursor: url(arrow-right.png), pointer; }
+
+.center-carousel.slick-slider {
+  margin: 0; }
+.center-carousel .slick-slide {
+  opacity: 0.2;
+  margin: 0 30px;
+  -webkit-transition: all 0.3 ease;
+  -moz-transition: all 0.3 ease;
+  -ms-transition: all 0.3 ease;
+  -o-transition: all 0.3 ease;
+  transition: all 0.3 ease; }
+  .center-carousel .slick-slide.slick-center {
+    opacity: 1;
+    -webkit-transition: all 0.3 ease;
+    -moz-transition: all 0.3 ease;
+    -ms-transition: all 0.3 ease;
+    -o-transition: all 0.3 ease;
+    transition: all 0.3 ease; }
+.center-carousel .captions-carousel {
+  padding-left: 20%;
+  padding-right: 20%; }
+  .center-carousel .captions-carousel .text {
+    margin-left: 50px;
+    font-style: italic; }
+  .center-carousel .captions-carousel .gallery-zoom {
+    margin-right: 50px; }
+
+.captions-carousel {
+  z-index: 50;
+  opacity: .95;
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  left: 0;
+  right: 0;
+  background: rgba(51, 51, 51, 0.9);
+  padding-top: 14px;
+  padding-bottom: 14px; }
+  .captions-carousel.slick-slider {
+    margin: 0; }
+  .captions-carousel .text {
+    color: #c1c1c1;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    display: block;
+    margin-left: 50px;
+    font-style: italic; }
+  .captions-carousel .gallery-zoom {
+    background: url(carousel-zoom.png);
+    width: 20px;
+    height: 20px;
+    display: block;
+    z-index: 999;
+    float: right;
+    margin-right: 50px;
+    cursor: pointer; }
+
+#full-screen {
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  margin: 0 auto;
+  position: fixed;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.95); }
+  #full-screen .slick-slide {
+    margin: 60px 0 40px; }
+  #full-screen .slick-track {
+    min-height: 100%; }
+    #full-screen .slick-track div img {
+      margin: 0 auto;
+      float: none;
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      max-height: none;
+      box-sizing: border-box;
+      height: auto;
+      padding: 0 10%; }
+  #full-screen .captions-carousel {
+    position: fixed; }
+  #full-screen img {
+    top: auto; }
+  #full-screen .content {
+    display: table;
+    height: 100%;
+    width: 100%;
+    z-index: 12; }
+  #full-screen .item {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    vertical-align: middle; }
+  #full-screen .carousel-caption {
+    position: fixed;
+    z-index: 20;
+    bottom: 0; }
+  #full-screen .close {
+    background: url(x.png);
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    right: 20px;
+    top: 60px;
+    cursor: pointer !important;
+    z-index: 5;
+    opacity: .8;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2; }
+    #full-screen .close:hover {
+      opacity: 1; }
+
+.slick-initialized .slick-slide img {
+  max-width: 100% !important; }
+
+/*# sourceMappingURL=slick.css.map */

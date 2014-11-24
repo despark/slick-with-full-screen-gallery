@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="slick.css">
+
+	<script src="jquery.js"></script>
+	<script src="slick.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<section id="gallery" class="clear">
+		<h1><!-- Title if any --></h1>
+
+		<!-- Prefix images with -small and -big for full screen mode -->
+		
+		<!-- slick Carousel -->
+		<div class="center-carousel">
+			<div>
+				<img src="pathToImg-small.jpg" data-caption="Some caption text for image" alt="">
+			</div>
+			<div>
+				<img src="pathToImg-small.jpg" alt="">
+			</div>
+			<div>
+				<img src="pathToImg-small.jpg" data-caption="Some caption text for image" alt="">
+			</div>
+			<div>
+				<img src="pathToImg-small.jpg" alt="">
+			</div>
+			<section class="captions-carousel">
+				<span class="gallery-zoom"></span>
+				<span class="text"></span>
+			</section>
+		</div>
+		<!-- slick Carousel fullscreen mode -->
+		<section  id="full-screen" style="display: none;">
+			<span class="close"></span>
+			<section class="caption captions-carousel">
+				<span class="text"></span>
+			</section>
+		</section>
+	</section>
+	
+</body>
+</html>
