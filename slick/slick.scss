@@ -385,6 +385,17 @@ $slick-opacity-not-active: .25 !default;
         display: block;
         margin-left: 50px;
         font-style: italic;
+        &:before, &:after {
+            font: inherit;
+            float: left;
+            // width: 20px;
+            height: 20px;
+            padding-right: 4px;
+            content: attr(data-counter);
+        }
+        &:after {
+            content: ' / ' attr(data-count);
+        }
     }
     .gallery-zoom {
         background: url(carousel-zoom.png);
