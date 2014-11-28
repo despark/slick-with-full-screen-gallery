@@ -9,12 +9,9 @@ $(window).load(function() {
         onInit: function() {
             $self = $(this)[0];
             console.log('init');
-            // $(this.$slider[0].querySelectorAll('.count')[0]).text(this.slideCount);
             $.extend(this, {
-                // counter: $(this.$slider[0].querySelectorAll('.counter')[0]),
                 captionText: $(this.$slider[0].querySelectorAll('.text')[0]),
                 changeCaptionText: function() {
-                    // this.counter.text(this.currentSlide + 1);
                     this.captionText[0].dataset.counter = this.currentSlide + 1;
                     this.captionText[0].innerText = $self.$slides[$self.currentSlide].firstElementChild.dataset.caption || "";
                 },

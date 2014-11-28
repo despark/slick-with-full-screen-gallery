@@ -247,10 +247,7 @@
   padding-left: 20%;
   padding-right: 20%; }
   .center-carousel .captions-carousel .text {
-    margin-left: 50px;
     font-style: italic; }
-  .center-carousel .captions-carousel .gallery-zoom {
-    margin-right: 50px; }
 
 .captions-carousel {
   z-index: 50;
@@ -265,13 +262,18 @@
   padding-bottom: 14px; }
   .captions-carousel.slick-slider {
     margin: 0; }
+  .captions-carousel .captions-carousel_wrapper {
+    padding: 0 50px;
+    max-width: 940px;
+    margin: 0 auto;
+    background-color: inherit; }
   .captions-carousel .text {
     color: #c1c1c1;
     text-align: left;
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     display: block;
-    margin-left: 50px;
+    margin-left: 0;
     font-style: italic; }
     .captions-carousel .text:before, .captions-carousel .text:after {
       font: inherit;
@@ -288,7 +290,7 @@
     display: block;
     z-index: 999;
     float: right;
-    margin-right: 50px;
+    margin-right: 0;
     cursor: pointer; }
 
 #full-screen {
@@ -320,6 +322,8 @@
       padding: 0 10%; }
   #full-screen .captions-carousel {
     position: fixed; }
+    #full-screen .captions-carousel .text {
+      padding-left: 30px; }
   #full-screen img {
     top: auto; }
   #full-screen .content {
@@ -357,6 +361,7 @@
       opacity: 1; }
 
 .slick-initialized .slick-slide img {
-  max-width: 100% !important; }
+  max-width: 100% !important;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=slick.css.map */
